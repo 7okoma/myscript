@@ -48,4 +48,4 @@ print_large_text("7OKOMA")
 
 print_large_text("TELEGRAM BOT")
 
-animate_text("TELEGRAM BOT" bold=False)
+animate_text("TELEGRAM BOT", bold=False)

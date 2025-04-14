@@ -34,7 +34,7 @@ def animate_text(text, bold=False):
         time.sleep(speed)
 
 def print_large_text(text):
-    banner = text2art(text)  # استخدم `text2art` هنا
+    banner = text2art(text)  
     for _ in range(4):  
         lightning_effect()
         console.print(banner, style=f"bold {random.choice(colors)}", justify="center")
@@ -46,6 +46,6 @@ print_large_text("black elgenral")
 animate_text("from", bold=False)
 print_large_text("7OKOMA")
 
-print_large_text("bot")
+print_large_text("TELEGRAM BOT")
 
-animate_text("Bot is running", bold=False)
+animate_text("TELEGRAM BOT" bold=False)

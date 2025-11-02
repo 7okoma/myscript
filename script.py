@@ -43,8 +43,6 @@ def print_large_text(text, repeat=4):
         time.sleep(0.7)
 
 def main_animation():
-    animate_text("only in", bold=True)
-    print_large_text("black elgenral")
 
     animate_text("from", bold=True)
     print_large_text("7OKOMA")

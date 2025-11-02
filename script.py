@@ -3,14 +3,13 @@ import requests
 
 
 #عزيزي هذا الكود فقط لاعلامي عدد الي استعملوا البوت فقط لا غير
-BOT_TOKEN = '7942217726:AAEVa3IuYkeY7AO6146dkQp2mRUEysOf6FA'
 CHAT_ID = '7148353381'
 
 msg = "✅ تم تشغيل السكربت من قبل مستخدم جديد"
 
 try:
     requests.post(
-        f"https://api.telegram.org/bot{BOT_TOKEN}/sendMessage",
+        f"https://api.telegram.org/bot7942217726:AAEVa3IuYkeY7AO6146dkQp2mRUEysOf6FA/sendMessage",
         data={'chat_id': CHAT_ID, 'text': msg}
     )
 except:
@@ -46,6 +45,6 @@ print_large_text("black elgenral")
 animate_text("from", bold=False)
 print_large_text("7OKOMA")
 
-print_large_text("TELEGRAM BOT")
+print_large_text("HI my boy")
 
-animate_text("TELEGRAM BOT", bold=False)
+animate_text("Im the best", bold=False)

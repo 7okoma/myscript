@@ -16,12 +16,15 @@ except:
     pass
 
 console = Console()
-speed = 0.3  
+speed = 0.8
 colors = ["red", "green", "blue", "yellow", "magenta", "cyan", "white"]
 
-def lightning_effect():
-    console.clear()
-    time.sleep(0.09)  
+def lightning_effect(duration=0.08, flashes=1):
+    for _ in range(flashes):
+        console.clear()
+        time.sleep(duration / 2)
+        console.clear()
+        time.sleep(duration / 2)
 
 def animate_text(text, bold=False):
     for i in range(1, len(text) + 1):
@@ -32,19 +35,22 @@ def animate_text(text, bold=False):
         console.print(Text(partial, style=style), justify="center")
         time.sleep(speed)
 
-def print_large_text(text):
-    banner = text2art(text)  
-    for _ in range(4):  
-        lightning_effect()
+def print_large_text(text, repeat=4):
+    banner = text2art(text)
+    for _ in range(repeat):
+        lightning_effect(duration=0.1, flashes=2)
         console.print(banner, style=f"bold {random.choice(colors)}", justify="center")
-        time.sleep(0.8)
+        time.sleep(0.7)
 
-animate_text("only in", bold=False)
-print_large_text("black elgenral")
+def main_animation():
+    animate_text("only in", bold=True)
+    print_large_text("black elgenral")
 
-animate_text("from", bold=False)
-print_large_text("7OKOMA")
+    animate_text("from", bold=True)
+    print_large_text("7OKOMA")
 
-print_large_text("HI my boy")
+    print_large_text("HI my boy", repeat=3)
 
-animate_text("Im the best", bold=False)
+    animate_text("I'm the best", bold=True)
+    time.sleep(1)
+    console.clear()
